@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+
+# VS Code temp files
+tempCodeRunnerFile.py
+
+# Environment variables
+.env
+
+# User generated data
+user_uploads/
+
+# Generated media
+static/reels/
+static/songs/
+static/99efbd83-*
+static/1413d76d-*
+
+# Media files
+*.mp3
+*.mp4
+*.wav
+*.jpg
+

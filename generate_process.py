@@ -62,24 +62,20 @@ def create_reel(folder):
     command = [
         "ffmpeg",
         "-y",
-        "-framerate", "1/3",
-        "-thread_queue_size", "512",
-        "-i", f"{folder_path}/frame_%03d.jpg",
-        "-i", audio_path,
+        "-framerate", "1",
+        "-i", f"user_uploads/{folder}/frame_%03d.jpg",
+        "-i", f"user_uploads/{folder}/audio.mp3",
         "-vf",
-        (
-            "scale=1080:1920:force_original_aspect_ratio=decrease,"
-            "pad=1080:1920:(ow-iw)/2:(oh-ih)/2:black,"
-            "format=yuv420p"
-        ),
+        "scale=1080:1920:force_original_aspect_ratio=decrease,"
+        "pad=1080:1920:(ow-iw)/2:(oh-ih)/2",
+        "-r", "30",
         "-c:v", "libx264",
-        "-profile:v", "baseline",
-        "-level", "3.1",
-        "-preset", "ultrafast",
+        "-profile:v", "high",
+        "-level", "4.1",
         "-pix_fmt", "yuv420p",
         "-c:a", "aac",
         "-shortest",
-        output_video,
+        f"static/reels/{folder}.mp4"
     ]
 
 

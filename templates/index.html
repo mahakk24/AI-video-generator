@@ -42,12 +42,14 @@
 <section class="showcase-section">
     <div class="container">
         <h2 class="showcase-title">Featured Creations</h2>
-        <div class="image-grid">
-            <img src="{{ url_for('static', filename='1.jpg') }}" alt="Reel Example 1" class="showcase-image">
-            <img src="{{ url_for('static', filename='2.jpg') }}" alt="Reel Example 2" class="showcase-image">
-            <img src="{{ url_for('static', filename='3.jpg') }}" alt="Reel Example 3" class="showcase-image">
-            <img src="{{ url_for('static', filename='4.jpg') }}" alt="Reel Example 4" class="showcase-image">
-            <img src="{{ url_for('static', filename='5.jpg') }}" alt="Reel Example 5" class="showcase-image">
+        <div class="reel-grid">
+            <div class="reel-card">
+                <img src="{{ url_for('static', filename='demo/reel1.jpg') }}" class="reel-thumb">
+            </div>
+            <div class="reel-card">
+                <img src="{{ url_for('static', filename='demo/reel2.jpeg') }}" class="reel-thumb">
+            </div>
+
         </div>
     </div>
 </section>

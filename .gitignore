@@ -10,15 +10,13 @@ tempCodeRunnerFile.py
 # User generated data
 user_uploads/
 
-# Generated media
+# Generated media only
 static/reels/
 static/songs/
-static/99efbd83-*
-static/1413d76d-*
+user_uploads/
 
-# Media files
+# Generated audio/video
 *.mp3
-*.mp4
-*.wav
-*.jpg
+
+
 

@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #405DE6;
-    --secondary-color: #5851DB;
-    --accent-color: #833AB4;
+    --primary-color: #162157;
+    --secondary-color: #2720a5;
+    --accent-color: #2537c0;
 }
 
 body {
@@ -133,16 +133,9 @@ footer {
     margin-bottom: 3rem;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 0 1rem;
-}
 
 .showcase-image {
     width: 100%;
-    height: 300px;
     object-fit: cover;
     border-radius: 15px;
     transition: transform 0.3s ease;
@@ -162,3 +155,50 @@ footer {
         font-size: 1.2rem;
     }
 } 
+/* ===== Reel Layout (Vertical / Instagram Style) ===== */
+
+.reel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    justify-content: center;
+    max-width: 520px;      
+    margin: 0 auto;
+}
+
+.reel-card {
+    position:relative;
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 9 / 16;   
+    border-radius: 18px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.reel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top;    
+}
+
+/* Hover effect */
+.reel-card:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+/* Play icon overlay */
+.reel-card::after {
+    content: "▶";
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    opacity: 0.85;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
